@@ -18,19 +18,30 @@ git clone https://github.com/<your-username>/ims-mobile.git
 cd ims-mobile
 ```
 
-### 2. Install dependencies
+### 2. Install the correct Flutter version (recommended)
+
+This project uses [FVM](https://fvm.app/) to pin the Flutter version.
+
+```bash
+dart pub global activate fvm
+fvm install
+```
+
+Then use FVM to run Flutter commands:
+
+```bash
+fvm flutter pub get
+fvm flutter run
+```
+
+Or if you already have Flutter 3.41.4+ installed, you can skip FVM and run directly:
 
 ```bash
 flutter pub get
-```
-
-### 3. Run the app
-
-```bash
 flutter run
 ```
 
-### 4. Run tests
+### 3. Run tests
 
 ```bash
 flutter test
