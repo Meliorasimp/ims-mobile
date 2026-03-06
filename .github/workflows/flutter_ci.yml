@@ -16,12 +16,12 @@ jobs:
 
       - name: Install dependencies
         run: flutter pub get
-        working-directory: src
+        working-directory: .
 
       - name: Analyze
         run: flutter analyze
-        working-directory: src
+        working-directory: .
 
       - name: Run tests
         run: flutter test
-        working-directory: src
+        working-directory: .

@@ -16,12 +16,12 @@ jobs:
 
       - name: Install dependencies
         run: flutter pub get
-        working-directory: src
+        working-directory: .
 
       - name: Check formatting
         run: dart format --check .
-        working-directory: src
+        working-directory: .
 
       - name: Analyze code
         run: flutter analyze --fatal-infos
-        working-directory: src
+        working-directory: .
