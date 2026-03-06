@@ -1,0 +1,27 @@
+name: Flutter CI
+
+on:
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.19.0"
+
+      - name: Install dependencies
+        run: flutter pub get
+        working-directory: src
+
+      - name: Analyze
+        run: flutter analyze
+        working-directory: src
+
+      - name: Run tests
+        run: flutter test
+        working-directory: src
