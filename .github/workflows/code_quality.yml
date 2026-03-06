@@ -1,0 +1,27 @@
+name: Code Quality
+
+on:
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.19.0"
+
+      - name: Install dependencies
+        run: flutter pub get
+        working-directory: .
+
+      - name: Check formatting
+        run: dart format --check .
+        working-directory: .
+
+      - name: Analyze code
+        run: flutter analyze --fatal-infos
+        working-directory: .
