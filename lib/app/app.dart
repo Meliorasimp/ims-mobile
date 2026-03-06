@@ -7,14 +7,18 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'IMS Mobile',
-
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Scaffold(
+      home: Scaffold(
         backgroundColor: Colors.yellow,
-        body: SizedBox(
+        appBar: AppBar(
+          title: const Text('IMS Mobile'),
+          backgroundColor: Colors.deepPurple,
+          foregroundColor: Colors.white,
+        ),
+        body: const SizedBox(
           width: 199,
           height: 199,
           child: ColoredBox(
@@ -22,7 +26,7 @@ class App extends StatelessWidget {
             child: Text.rich(TextSpan(text: "Hello World")),
           ),
         ),
-        drawer: Drawer(child: Text("Drawer")),
+        drawer: const Drawer(child: Text("Drawer")),
       ),
     );
   }
