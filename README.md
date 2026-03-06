@@ -8,6 +8,7 @@ A Flutter mobile application for IMS.
 - Dart SDK **3.6.0** or later (included with Flutter)
 - Android Studio or VS Code with Flutter extension
 - An Android emulator or physical device
+- run command "dart pub global activate fvm" then "fvm install" to get the projects flutter version
 
 ## Getting Started
 
