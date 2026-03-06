@@ -19,7 +19,7 @@ jobs:
         working-directory: .
 
       - name: Check formatting
-        run: dart format --check .
+        run: dart format --set-exit-if-changed --output=none .
         working-directory: .
 
       - name: Analyze code
